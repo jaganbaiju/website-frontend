@@ -1,0 +1,154 @@
+.navbar {
+    /* width: 1000px; */
+    width: 100%;
+    max-width: 1000px;
+    position: fixed;
+    padding: 0 5px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.nav-bar {
+    background-color: #333232;
+    color: var(--secondary-color);
+    height: 95px;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 600px;
+    padding-top: 15px;
+}
+
+.item>a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    margin-left: 10px;
+}
+
+.contact>a {
+    background-color: rgba(72, 75, 72, 0.42);
+    border-radius: 50px;
+    padding: 5px 19px;
+    transition: all 0.5s ease-in-out;
+    align-self: center;
+}
+
+.contact>a:hover {
+    background-color: rgb(57, 180, 76);
+}
+
+.navitem {
+    position: relative;
+}
+
+.navitem::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+
+    width: 0%;
+    height: 2px;
+    background-color: var(--yellow);
+
+    transition: width 0.3s ease;
+}
+
+.navitem:hover::after {
+    width: 100%;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.356);
+    transform: translateY(45px);
+}
+
+.dropdown-item {
+    color: var(--secondary-color);
+}
+
+.dropdown-item:active {
+    background-color: var(--secondary-color);
+}
+
+.navbar-icon {
+    display: none;
+}
+
+
+
+@media (max-width: 990px) {
+    .nav-bar {
+        height: 75px;
+        padding: 0 10px;
+        display: block;
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    #nav-open:checked~.nav-items {
+        display: block;
+    }
+
+    .nav-head {
+        /* position: absolute;
+        top: 50%;
+        transform: translateY(-50%); */
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-items-div>ul {
+        width: 100%;
+    }
+
+    .nav-items-div {
+        background-color: rgba(0, 0, 0, 0.388);
+        text-align: center;
+        line-height: 15vh;
+        margin-top: 10px;
+        border-radius: 50px;
+    }
+
+    .dropdown-menu {
+        line-height: 5vh;
+        left: 50% !important;
+        transform: translateX(-50%);
+        background-color: var(--primary-color);
+    }
+
+    .navbar-icon {
+        display: block;
+        color: var(--secondary-color);
+        margin-right: 8px;
+        cursor: pointer;
+    }
+
+    .navitem {
+        width: fit-content;
+        margin: auto;
+    }
+
+    .navitem::after {
+        bottom: 20px;
+    }
+}

@@ -1,3 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-color: #1B1C1A;
+  --primary-color: #212121;
+  --secondary-color: #FFFFFF;
+  --yellow: #FCD104;
+  --sub-heading-size: 40px;
+  --orange: #F15E22;
+  --main-heading-size: 140px;
+  --mini-heading-size: 20px;
+  --content-width: 1000px;
+  --service-head: 32px;
+  --para-font-size: 14px;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +31,24 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+@media (max-width: 990px) {
+  :root {
+    --sub-heading-size: 30px;
+    --main-heading-size: 100px;
+    --mini-heading-size: 15px;
+    --service-head: 27px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --sub-heading-size: 20px;
+    --main-heading-size: 60px;
+    --mini-heading-size: 14px;
+    --service-head: 20px;
+  }
 }

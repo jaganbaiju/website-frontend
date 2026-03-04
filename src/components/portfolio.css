@@ -1,0 +1,40 @@
+.portfolio-div {
+    margin-top: 110px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.prtfo-sub-div {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+    padding: 0 15px;
+}
+
+.prtfo-para {
+    font-size: 16px;
+    width: 55%;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.prtfo-link {
+    font-size: 12px;
+    font-weight: 800;
+    font-family: "Sansation", sans-serif;
+    color: var(--secondary-color);
+    text-decoration: none;
+    background-color: #363030;
+    padding: 10px 20px;
+    border-radius: 13px;
+}
+
+@media (max-width: 768px) {
+    .prtfo-para {
+        width: 80%;
+    }
+
+    .portfolio-div {
+        margin-top: 80px;
+    }
+}

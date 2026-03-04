@@ -1,0 +1,39 @@
+.about-div {
+    background-color: var(--primary-color);
+    margin: 30px 0;
+    color: var(--secondary-color);
+    padding: 40px 0;
+    overflow-x: hidden;
+}
+
+.about {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+}
+
+.abt-heading {
+    font-size: 16px !important;
+    color: var(--orange);
+    font-weight: 600;
+}
+
+.abt-sub-head {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: monospace;
+}
+
+.abt-para {
+  text-align: justify;
+  font-size: var(--para-font-size);
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.abt-read-more {
+  text-decoration: none;
+  color: var(--orange);
+  font-size: 16px;
+  font-weight: 600;
+}

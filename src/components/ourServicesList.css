@@ -1,0 +1,21 @@
+.our-service-list-head {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--orange);
+}
+
+.our-service-list-para {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.list-img {
+    width: 25vw;
+    max-width: 200px;
+}
+
+@media (max-width: 575px) {
+    .our-service-list-para {
+    display: none;
+}
+}

@@ -1,0 +1,57 @@
+.we-provide-div {
+    margin: 40px 0;
+    color: var(--secondary-color);
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+.serivces-provide {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+}
+
+.serivce-provide-head-div,
+.service-provide-para-div {
+    padding: 15px;
+}
+
+.service-provide-para-div {
+    border-left: 2px solid var(--orange);
+}
+
+.serivce-provide-head {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.service-provide-para {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.our-services-list {
+    margin: 40px 0;
+}
+
+hr {
+    border: none;              
+    height: 2px;               
+    background-color: rgb(253, 253, 253);  
+}
+
+
+@media (max-width: 767px) {
+    .service-provide-para-div {
+        border: none
+    }
+
+    .serivce-provide-head-div,
+    .service-provide-para-div {
+        padding: 5px;
+    }
+
+    .serivce-provide-head {
+    text-align: center;
+}
+}

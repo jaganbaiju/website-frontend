@@ -1,0 +1,8 @@
+.step-div {
+    /* background-color: beige; */
+    color: var(--secondary-color);
+}
+
+.step-card {
+    text-align: center;
+}

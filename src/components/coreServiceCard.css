@@ -1,0 +1,43 @@
+.icon-div {
+    background-color: #1B1C1A;
+    width: fit-content;
+    margin: auto;
+    padding: 18px 15px;
+    border-radius: 50%;
+    transition: all 0.8s ease-in-out;
+}
+
+.core-card-title {
+    font-size: var(--mini-heading-size);
+    transition: all 0.8s ease-in-out;
+    margin-top: 10px;
+}
+
+
+.core-card-para {
+    font-size: 12px;
+    width: 70%;
+    margin: auto;
+    transition: all 0.8s ease-in-out;
+    margin-top: 10px;
+}
+
+.core-service-card {
+    transition: all 0.8s ease-in-out;
+}
+
+.core-service-card:hover {
+    transform: translateY(-10px);
+}
+
+.core-service-card:hover .icon-div {
+    background-color: var(--orange);
+}
+
+.core-service-card:hover .core-card-title {
+    color: var(--orange);
+}
+
+.core-service-card:hover .core-card-para {
+    color: var(--orange);
+}

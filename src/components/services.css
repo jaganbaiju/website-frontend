@@ -1,0 +1,48 @@
+body {
+    background-color: var(--background-color);
+}
+
+.services-div {
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    padding: 50px 5px;
+}
+
+
+.services-sub-div {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+    text-align: center;
+}
+
+.service-head {
+    font-size: var(--service-head);
+    font-weight: 700;
+    color: var(--orange);
+}
+
+.service-para {
+    font-size: var(--para-font-size);
+}
+
+.service-card-div {
+    width: 100%;
+    padding: 20px;
+}
+
+@media (max-width: 990px) {
+    .services-div {
+        padding: 40px 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-div {
+        padding: 30px 5px;
+    }
+
+    .service-card-div {
+        padding: 0 40px;
+    }
+}

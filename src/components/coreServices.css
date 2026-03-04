@@ -1,0 +1,17 @@
+.core-service-sub-div {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+    color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+.core-service-div {
+    padding: 20px 0;
+    background-color: var(--primary-color);
+}
+
+.core-service-head {
+    font-size: var(--sub-heading-size);
+    font-weight: 500;
+}
