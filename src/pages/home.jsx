@@ -10,7 +10,10 @@ import WorkFlowChart from '../components/workFlowChart';
 import Coreservices from '../components/coreServices';
 import WeProvided from '../components/weProvided';
 import OurTeam from '../components/ourTeam';
-
+import Creative from '../components/creative';
+import Client from '../components/client';
+import ClientWork from '../components/clientWorks';
+import Footer from '../components/footer';
 
 function Home() {
     return (
@@ -26,6 +29,10 @@ function Home() {
             <Coreservices />
             <WeProvided />
             <OurTeam />
+            <Creative />
+            <Client />
+            <ClientWork />
+            <Footer />
         </div>
     );
 }

@@ -1,0 +1,31 @@
+.client-work-div {
+    color: var(--secondary-color);
+    padding: 15px;
+}
+
+.client-work {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+    padding: 70px 0;
+}
+
+.client-work-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.client-work-track {
+    display: flex;
+    gap: 5px;
+    animation: scrollLeft 10s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

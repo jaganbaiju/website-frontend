@@ -1,0 +1,39 @@
+.poster-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.poster-track {
+    display: flex;
+    width: max-content;
+    animation: slideStep 16s linear infinite;
+}
+
+.poster-card-div {
+    width: 350px;
+    margin: 0 15px;
+    flex-shrink: 0;
+}
+
+.poster-img {
+    width: 100%;
+}
+
+/* Slide one by one with pause */
+@keyframes slideStep {
+  0%   { transform: translateX(0); }
+
+  10%  { transform: translateX(0); }
+
+  15%  { transform: translateX(-12.5%); }
+  25%  { transform: translateX(-12.5%); }
+
+  30%  { transform: translateX(-25%); }
+  40%  { transform: translateX(-25%); }
+
+  45%  { transform: translateX(-37.5%); }
+  55%  { transform: translateX(-37.5%); }
+
+  60%  { transform: translateX(-50%); }
+  100% { transform: translateX(-50%); }
+}

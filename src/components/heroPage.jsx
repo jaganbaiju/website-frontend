@@ -2,11 +2,17 @@ import React from "react";
 import './heroPage.css';
 import { motion } from "framer-motion";
 import NavaBar from "./navBar";
+import HeroImg from "../assets/images/Hero-BG.png";
 
 
 function HeroPage() {
     return (
-        <div className="hero-page">
+        <div className="hero-page"
+            style={{
+                backgroundImage: 
+                `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%),
+                url(${HeroImg})`}}
+        >
             <NavaBar />
             <div>
                 <motion.h3 className="sub-heading"
@@ -29,7 +35,7 @@ function HeroPage() {
                     We craft impactful Printing works , advertising , branding & digital marketing strategies to grow your brand and achieve measurable success!
                 </p>
             </div>
-        </div>
+        </div >
     );
 }
 

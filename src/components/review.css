@@ -1,0 +1,27 @@
+.client-img-div {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.review-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-card {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.review-dept {
+    font-size: 24px;
+}
+
+.review-msg {
+    font-size: 12px;
+    text-align: justify;
+}

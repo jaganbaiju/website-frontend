@@ -1,0 +1,72 @@
+.footer-div {
+    padding: 15px;
+    color: var(--secondary-color);
+}
+
+.footer {
+    width: 100%;
+    max-width: var(--content-width);
+    margin: auto;
+}
+
+.footer-logo {
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.footer-sub-head {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-para {
+    font-size: 8px;
+}
+
+.social-icon {
+    margin-top: 30px;
+}
+
+.icon {
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.insta:hover {
+    color: #E4405F 
+}
+
+.fb:hover {
+    color: #1877F2
+}
+
+.twr:hover {
+    color: black
+}
+
+.yt:hover {
+    color: #FF0000;
+}
+
+.footer-section {
+    line-height: 25px;
+}
+
+.footer-section-head {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.footer-section > li {
+    list-style: none;
+    margin-left: -25px;
+    font-size: 11px;
+}
+
+.footer-section >li > a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
