@@ -31,6 +31,26 @@
     height: 35%;
 }
 
+.new-work-card{
+  position: relative;
+  overflow: hidden;
+}
+
+.work-card-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.new-service-card-body{
+  position:relative;
+  z-index:2;
+}
+
 @media (max-width: 768px) {
     .card-1,
     .card-2,

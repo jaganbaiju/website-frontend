@@ -6,7 +6,7 @@ import CarouselIMG from "../assets/images/coo.png"
 
 function OurHeadCarousel() {
     return (
-        <Carousel controls={false} indicators={false}>
+        <Carousel controls={false} indicators={false} interval={3000} pause={false}>
             <Carousel.Item>
                 <h2 className='team-carousel-head'>
                     Our COO's Message

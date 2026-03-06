@@ -19,7 +19,7 @@ function HeroPage() {
             .catch((error) => console.error(error));
     }, []);
 
-    console.log(heroData);
+    // console.log(heroData);
 
     // if (!heroData) {
     //     return <p>Loading..</p>;

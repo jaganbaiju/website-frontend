@@ -20,7 +20,7 @@ function Services() {
             .catch((err) => console.log(err));
     }, []);
 
-    console.log(serivcesData);
+    // console.log(serivcesData);
 
     return (
         <div className="services-div">
@@ -48,6 +48,7 @@ function Services() {
                                         title={cardData.heading}
                                         desc={cardData.desc}
                                         link={cardData.link}
+                                        key={cardData.id}
                                     />
                                 );
                             })
