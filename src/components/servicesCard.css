@@ -20,9 +20,9 @@
     opacity: 1;
 }
 
-/* .card:not(:hover) {
-    
-} */
+.card:hover .service-card-desc {
+    line-height: 15px;
+}
 
 .service-card-body {
     line-height: 2px;
@@ -40,6 +40,7 @@
     font-size: 11px;
     font-weight: 400;
     color: var(--yellow);
+    transition: all 0.7s ease-in-out;
 }
 
 .service-card-link {

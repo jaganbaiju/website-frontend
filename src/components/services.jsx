@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import './services.css'
 import { motion } from "framer-motion";
 import ServiceCard from "./servicesCard";
@@ -7,6 +7,21 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 
 function Services() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [serivcesData, setServicesData] = useState([])
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/our_services/")
+            .then((res) => res.json())
+            .then((data) => {
+                setServicesData(data.data);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+    console.log(serivcesData);
+
     return (
         <div className="services-div">
             <div className="services-sub-div">
@@ -19,14 +34,30 @@ function Services() {
                     Deliver Solution
                 </motion.h4>
                 <p className="service-para">
-                    We craft custom solutions to help you achieve your specific marketing goals and objectives.                
+                    We craft custom solutions to help you achieve your specific marketing goals and objectives.
                 </p>
                 <div className="service-card-div">
                     <div className="row">
+
+                        {
+                            serivcesData?.map((cardData) => {
+                                return (
+                                    <ServiceCard
+                                        id={cardData.id}
+                                        bgImg={`${BASE_URL}${cardData.background_image}`}
+                                        title={cardData.heading}
+                                        desc={cardData.desc}
+                                        link={cardData.link}
+                                    />
+                                );
+                            })
+                        }
+
+
+                        {/* <ServiceCard />
                         <ServiceCard />
                         <ServiceCard />
-                        <ServiceCard />
-                        <ServiceCard />
+                        <ServiceCard /> */}
                     </div>
                 </div>
             </div>
