@@ -30,7 +30,7 @@ function HeroPage() {
             style={{
                 backgroundImage:
                     `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%),
-                url(${BASE_URL}${heroData?.background_image})`
+                url(${heroData?.background_image})`
             }}
         >
             <NavaBar />
