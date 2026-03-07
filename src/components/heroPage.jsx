@@ -28,6 +28,8 @@ function HeroPage() {
    const img = "https://ik.imagekit.io/siczeomnnq/coo_GSr7S4p81.png"
    const newurl = "https%3A/ik.imagekit.io/siczeomnnq/coo_GSr7S4p81.png"
    const from_api = heroData?.background_image
+  ? decodeURIComponent(heroData.background_image.replace(/^\/+/, ''))
+  : null;
 
    console.log(from_api)
     return (
