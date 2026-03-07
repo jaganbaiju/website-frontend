@@ -25,11 +25,12 @@ function HeroPage() {
     //     return <p>Loading..</p>;
     // }
 
+   const img = "https://ik.imagekit.io/siczeomnnq/coo_GSr7S4p81.png"
     return (
         <div className="hero-page"
             style={{
                 backgroundImage:
-                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${heroData?.background_image})`
+                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${img})`
             }}
         >
             <NavaBar />
