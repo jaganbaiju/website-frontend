@@ -29,14 +29,15 @@ function HeroPage() {
             heroData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
         )
         : null;
-
+    
+    const url = "https:/ik.imagekit.io/siczeomnnq/bg_Az6z1-wmu.png"
     // console.log(from_api)
 
     return (
         <div className="hero-page"
             style={{
                 backgroundImage:
-                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${from_api})`
+                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${url})`
             }}
         >
             <NavaBar />
