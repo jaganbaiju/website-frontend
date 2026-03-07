@@ -1,4 +1,4 @@
-import {React, useState, useEffect} from "react";
+import { React, useState, useEffect } from "react";
 import "./ourTeam.css"
 import OurHeadCarousel from "./ourHeadCarousel";
 import TeamCards from "./team";
@@ -33,10 +33,17 @@ function OurTeam() {
 
                             {
                                 teamData.map((item) => {
+
+                                    const imgUrl = item?.image
+                                        ? decodeURIComponent(
+                                            item.image.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+
                                     return (
-                                        <TeamCards 
+                                        <TeamCards
                                             key={item.id}
-                                            image={`${BASE_URL}${item.image}`}
+                                            image={`${imgUrl}`}
                                             name={item.name}
                                             positon={item.positon}
                                         />
@@ -47,10 +54,17 @@ function OurTeam() {
                             {/* dupllicate for smooth flow */}
                             {
                                 teamData.map((item) => {
+
+                                    const imgUrl = item?.image
+                                        ? decodeURIComponent(
+                                            item.image.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+                                        
                                     return (
-                                        <TeamCards 
+                                        <TeamCards
                                             key={item.id}
-                                            image={`${BASE_URL}${item.image}`}
+                                            image={`${imgUrl}`}
                                             name={item.name}
                                             positon={item.positon}
                                         />
@@ -58,7 +72,7 @@ function OurTeam() {
                                 })
                             }
 
-                            
+
                         </div>
                     </div>
                 </div>

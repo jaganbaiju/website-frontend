@@ -30,7 +30,7 @@ function Footer() {
                     </div>
                     <div className="col-md-8">
                         <div className="row">
-                            <div className="col-md-4">
+                            <div className="col-md-3">
                                 <div className="company-info">
                                     <h5 className="footer-section-head">
                                         Company Info
@@ -51,7 +51,7 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-3">
                                 <div className="freatures">
                                     <h5 className="footer-section-head">
                                         Features
@@ -64,7 +64,7 @@ function Footer() {
                                     </ul>
                                 </div>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col-md-6">
                                 <div className="get-in-touch">
                                     <h5 className="footer-section-head">
                                         Get In Touch

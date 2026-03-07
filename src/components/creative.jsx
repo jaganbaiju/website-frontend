@@ -65,10 +65,17 @@ function Creative() {
 
                         {
                             posterImages.map((item) => {
+
+                                const imgUrl = item?.poster
+                                        ? decodeURIComponent(
+                                            item.poster.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+
                                 return (
                                     <Poster 
                                         key={item.id}
-                                        img={`${BASE_URL}${item.poster}`}
+                                        img={`${imgUrl}`}
                                     />
                                 );
                             })
@@ -76,10 +83,17 @@ function Creative() {
 
                         {
                             posterImages.map((item) => {
+
+                                const imgUrl = item?.poster
+                                        ? decodeURIComponent(
+                                            item.poster.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+                                        
                                 return (
                                     <Poster 
                                         key={item.id}
-                                        img={`${BASE_URL}${item.poster}`}
+                                        img={`${imgUrl}`}
                                     />
                                 );
                             })

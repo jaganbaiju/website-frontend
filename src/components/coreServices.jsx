@@ -1,4 +1,4 @@
-import {React, useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import "./coreServices.css"
 import CoreServiceCard from "./coreServiceCard";
 
@@ -10,6 +10,7 @@ function Coreservices() {
 
     useEffect(() => {
         fetch("https://website-backend-api-sz6i.onrender.com/api/core_services/")
+        // fetch("http://127.0.0.1:8000/api/core_services/")
             .then((res) => res.json())
             .then((data) => {
                 setCoreCardData(data.data);
@@ -18,7 +19,7 @@ function Coreservices() {
     }, []);
 
     console.log(coreCardData);
-    
+
 
     return (
         <div className="core-service-div">
@@ -31,12 +32,19 @@ function Coreservices() {
 
                         {
                             coreCardData?.map((item) => {
+
+                                const imgUrl = item?.icon
+                                    ? decodeURIComponent(
+                                        item.icon.replace(/^\/(?!\/)/, '')
+                                    )
+                                    : null;
+
                                 return (
-                                    <CoreServiceCard 
+                                    <CoreServiceCard
                                         key={item.id}
                                         id={item.id}
                                         title={item.title}
-                                        icon={`${BASE_URL}${item.icon}`}
+                                        icon={`${imgUrl}`}
                                         desc={item.desc}
                                     />
                                 );

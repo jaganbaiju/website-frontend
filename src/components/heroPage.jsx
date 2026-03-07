@@ -1,7 +1,6 @@
 import './heroPage.css';
 import { motion } from "framer-motion";
 import NavaBar from "./navBar";
-import HeroImg from "../assets/images/Hero-BG.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -19,19 +18,20 @@ function HeroPage() {
             .catch((error) => console.error(error));
     }, []);
 
-    console.log(heroData);
+    // console.log(heroData);
 
     // if (!heroData) {
     //     return <p>Loading..</p>;
     // }
 
-   const img = "https://ik.imagekit.io/siczeomnnq/coo_GSr7S4p81.png"
-   const newurl = "https%3A/ik.imagekit.io/siczeomnnq/coo_GSr7S4p81.png"
-   const from_api = heroData?.background_image
-  ? decodeURIComponent(heroData.background_image.replace(/^\/+/, ''))
-  : null;
+    const from_api = heroData?.background_image
+        ? decodeURIComponent(
+            heroData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
+        )
+        : null;
 
-   console.log(from_api)
+    // console.log(from_api)
+
     return (
         <div className="hero-page"
             style={{

@@ -1,4 +1,4 @@
-import {React, useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import "./weProvided.css"
 import OurServicesList from "./ourServicesList";
 
@@ -17,7 +17,7 @@ function WeProvided() {
             .catch((err) => console.log(err));
     }, []);
 
-    return(
+    return (
         <div className="we-provide-div">
             <div className="serivces-provide">
                 <div className="row">
@@ -38,24 +38,27 @@ function WeProvided() {
 
                     {
                         listItemdata?.map((item, index) => {
+
+                            const imgUrl = item?.image
+                                ? decodeURIComponent(
+                                    item.image.replace(/^\/(?!\/)/, '')
+                                )
+                                : null;
+
                             return (
-                                <OurServicesList 
+                                <OurServicesList
                                     key={item.id}
                                     index={index}
                                     title={item.title}
-                                    img={`${BASE_URL}${item.image}`}
+                                    img={`${imgUrl}`}
                                     desc={item.desc}
                                 />
                             );
                         })
 
-                        
+
                     }
-                    {/* <OurServicesList />
-                    <OurServicesList />
-                    <OurServicesList />
-                    <OurServicesList />
-                    <OurServicesList /> */}
+
                 </div>
             </div>
         </div>

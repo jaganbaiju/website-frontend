@@ -9,7 +9,7 @@ function Client() {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("https://website-backend-api-sz6i.onrender.com//api/reviews/")
+        fetch("https://website-backend-api-sz6i.onrender.com/api/reviews/")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data.data);
@@ -17,6 +17,8 @@ function Client() {
             .catch((err) => console.log(err));
             
     }, []);
+
+    console.log(reviews);
 
 
     return(
@@ -43,10 +45,17 @@ function Client() {
                     <div className="review-track">
                         {
                             reviews.map((item) => {
+
+                               const imgUrl = item?.img
+                                        ? decodeURIComponent(
+                                            item.img.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null; 
+
                                 return (
                                     <Review 
                                         key={item.id}
-                                        img={`${BASE_URL}${item.img}`}
+                                        img={`${imgUrl}`}
                                         title={item.title}
                                         msg={item.desc}
                                     /> 
@@ -57,10 +66,17 @@ function Client() {
 
                         {
                             reviews?.map((item) => {
+
+                                const imgUrl = item?.img
+                                        ? decodeURIComponent(
+                                            item.img.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+
                                 return (
                                     <Review 
                                         key={item.id}
-                                        img={`${BASE_URL}${item.img}`}
+                                        img={`${imgUrl}`}
                                         title={item.title}
                                         msg={item.desc}
                                     /> 

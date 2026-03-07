@@ -24,11 +24,18 @@ function ClientWork () {
 
                         {
                             workData?.map((item) => {
+
+                                const imgUrl = item?.image
+                                        ? decodeURIComponent(
+                                            item.image.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+
                                 return (
                                     <ClientWorkCard 
                                         key={item.id}
                                         name={item.name}
-                                        img={`${BASE_URL}${item.image}`}
+                                        img={`${imgUrl}`}
                                         comp={item.company}
                                     />
                                 );
@@ -38,11 +45,18 @@ function ClientWork () {
 
                         {
                             workData?.map((item) => {
+
+                                const imgUrl = item?.image
+                                        ? decodeURIComponent(
+                                            item.image.replace(/^\/(?!\/)/, '')
+                                        )
+                                        : null;
+
                                 return (
                                     <ClientWorkCard 
                                         key={item.id}
                                         name={item.name}
-                                        img={`${BASE_URL}${item.image}`}
+                                        img={`${imgUrl}`}
                                         comp={item.company}
                                     />
                                 );

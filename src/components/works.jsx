@@ -15,6 +15,7 @@ function Works() {
 
     useEffect(() => {
         fetch("https://website-backend-api-sz6i.onrender.com/api/portfolio/")
+        // fetch("http://127.0.0.1:8000/api/portfolio/")
             .then((res) => res.json())
             .then((data) => {
                 setImgCardData(data.data.img_portfolio);
@@ -40,12 +41,51 @@ function Works() {
 
     // console.log(imgCard1);
 
+    const imgUrl1 = imgCard1?.background_image
+        ? decodeURIComponent(
+            imgCard1.background_image.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+
+    const imgUrl2 = imgCard2?.background_image
+        ? decodeURIComponent(
+            imgCard2.background_image.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+
+    const imgUrl3 = imgCard3?.background_image
+        ? decodeURIComponent(
+            imgCard3.background_image.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+
+    const imgUrl4 = imgCard4?.background_image
+        ? decodeURIComponent(
+            imgCard4.background_image.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+
+    const vdoUrl1 = vdoCard1?.background_video
+        ? decodeURIComponent(
+            vdoCard1.background_video.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+    
+    const vdoUrl2 = vdoCard2?.background_video
+        ? decodeURIComponent(
+            vdoCard2.background_video.replace(/^\/(?!\/)/, '')
+        )
+        : null;
+
+    // console.log(vdoCard1?.background_video);
+    // console.log(vdoUrl1);
+   
     return (
         <div className="works row g-3">
             <div className="column col-12 col-md-4">
                 <motion.div
                     className="work-card card-1 mb-3"
-                    style={{ backgroundImage: `url(${BASE_URL}${imgCard1?.background_image})` }}
+                    style={{ backgroundImage: `url(${imgUrl1})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.3 }}
@@ -67,7 +107,7 @@ function Works() {
                 </motion.div>
                 <motion.div
                     className="work-card card-2"
-                    style={{ backgroundImage: `url(${BASE_URL}${imgCard2?.background_image})` }}
+                    style={{ backgroundImage: `url(${imgUrl2})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.3 }}
@@ -91,7 +131,7 @@ function Works() {
             <div className="column col-12 col-md-4 ">
                 <motion.div
                     className="work-card card-3 mb-3"
-                    style={{ backgroundImage: `url(${BASE_URL}${imgCard3?.background_image})` }}
+                    style={{ backgroundImage: `url(${imgUrl3})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.5 }}
@@ -113,7 +153,7 @@ function Works() {
                 </motion.div>
                 <motion.div
                     className="work-card card-4"
-                    style={{ backgroundImage: `url(${BASE_URL}${imgCard4?.background_image})` }}
+                    style={{ backgroundImage: `url(${imgUrl4})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.5 }}
@@ -141,7 +181,7 @@ function Works() {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.8 }}
                     viewport={{ once: true, amount: 0.5 }}
-                >   
+                >
 
                     {vdoCard2?.background_video && (
                         <video
@@ -153,7 +193,7 @@ function Works() {
                             preload="auto"
                         >
                             <source
-                                src={`${BASE_URL}${vdoCard1?.background_video}`}
+                                src={`${vdoUrl1}`}
                                 type="video/mp4"
                             />
                         </video>
@@ -191,7 +231,7 @@ function Works() {
                             preload="auto"
                         >
                             <source
-                                src={`${BASE_URL}${vdoCard2?.background_video}`}
+                                src={`${vdoUrl2}`}
                                 type="video/mp4"
                             />
                         </video>

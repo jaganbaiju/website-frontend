@@ -13,6 +13,7 @@ function Services() {
 
     useEffect(() => {
         fetch("https://website-backend-api-sz6i.onrender.com/api/our_services/")
+        // fetch("http://127.0.0.1:8000/api/our_services/")
             .then((res) => res.json())
             .then((data) => {
                 setServicesData(data.data);
@@ -41,10 +42,19 @@ function Services() {
 
                         {
                             serivcesData?.map((cardData) => {
+                                // const imgUrl = cardData.background_image;
+                                // console.log(imgUrl);
+
+                                const imgUrl = cardData?.background_image
+                                    ? decodeURIComponent(
+                                        cardData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
+                                    )
+                                    : null;
+                                
                                 return (
                                     <ServiceCard
                                         id={cardData.id}
-                                        bgImg={`${BASE_URL}${cardData.background_image}`}
+                                        bgImg={`${imgUrl}`}
                                         title={cardData.heading}
                                         desc={cardData.desc}
                                         link={cardData.link}
@@ -53,7 +63,7 @@ function Services() {
                                 );
                             })
                         }
-                        
+
                     </div>
                 </div>
             </div>
