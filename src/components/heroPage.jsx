@@ -23,14 +23,12 @@ function HeroPage() {
     // if (!heroData) {
     //     return <p>Loading..</p>;
     // }
-    const getFullImageUrl = (url) => {
-        if (!url) return "";
-        if (url.startsWith("http")) return url; // already full URL
-        if (url.startsWith("/https:/")) return url.replace("/https:/", "https://"); // fix single slash
-        return url;
-    };
 
-    const from_api = getFullImageUrl(heroData.background_image);
+    const from_api = heroData?.background_image
+        ? decodeURIComponent(
+            heroData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
+        )
+        : null;
 
     // console.log(from_api)
 
