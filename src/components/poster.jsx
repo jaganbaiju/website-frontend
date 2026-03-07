@@ -3,11 +3,11 @@ import "./poster.css";
 import PosterImg from "../assets/images/poster-1.png";
 
 
-function Poster() {
+function Poster(props) {
     return(
         <div className="poster-card-div col-md-3">
             <div className="poster-card">
-                <img src={PosterImg} alt="img" className="poster-img" />
+                <img src={props.img} alt="img" className="poster-img" />
             </div>
         </div>
     );

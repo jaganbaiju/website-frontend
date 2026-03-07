@@ -1,9 +1,22 @@
-import React from "react";
+import {React, useState, useEffect } from "react";
 import "./weProvided.css"
 import OurServicesList from "./ourServicesList";
 
 
 function WeProvided() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [listItemdata, setListItemData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/services_list/")
+            .then((res) => res.json())
+            .then((data) => {
+                setListItemData(data.data);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
     return(
         <div className="we-provide-div">
             <div className="serivces-provide">
@@ -22,11 +35,27 @@ function WeProvided() {
 
                 <div className="our-services-list">
                     <hr />
+
+                    {
+                        listItemdata?.map((item, index) => {
+                            return (
+                                <OurServicesList 
+                                    key={item.id}
+                                    index={index}
+                                    title={item.title}
+                                    img={`${BASE_URL}${item.image}`}
+                                    desc={item.desc}
+                                />
+                            );
+                        })
+
+                        
+                    }
+                    {/* <OurServicesList />
                     <OurServicesList />
                     <OurServicesList />
                     <OurServicesList />
-                    <OurServicesList />
-                    <OurServicesList />
+                    <OurServicesList /> */}
                 </div>
             </div>
         </div>

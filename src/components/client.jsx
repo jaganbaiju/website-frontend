@@ -1,9 +1,24 @@
-import React from "react";
+import {React, useEffect, useState} from "react";
 import "./client.css"
 import Review from "./review";
 import { motion } from "framer-motion";
 
 function Client() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/reviews/")
+            .then((res) => res.json())
+            .then((data) => {
+                setReviews(data.data);
+            })
+            .catch((err) => console.log(err));
+            
+    }, []);
+
+
     return(
         <div className="client-div">
             <div className="client">
@@ -26,15 +41,34 @@ function Client() {
 
                 <div className="review-slider">
                     <div className="review-track">
-                        <Review />
-                        <Review />
-                        <Review />
-                        <Review /> 
+                        {
+                            reviews.map((item) => {
+                                return (
+                                    <Review 
+                                        key={item.id}
+                                        img={`${BASE_URL}${item.img}`}
+                                        title={item.title}
+                                        msg={item.desc}
+                                    /> 
+                                )
+                            })
+                        }
 
-                        <Review />                        
-                        <Review />                        
-                        <Review />                        
-                        <Review />                        
+
+                        {
+                            reviews?.map((item) => {
+                                return (
+                                    <Review 
+                                        key={item.id}
+                                        img={`${BASE_URL}${item.img}`}
+                                        title={item.title}
+                                        msg={item.desc}
+                                    /> 
+                                )
+                            })
+                        }
+
+                                               
 
                     </div>
                 </div>

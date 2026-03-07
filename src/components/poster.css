@@ -17,6 +17,8 @@
 
 .poster-img {
     width: 100%;
+    height: 40vw;
+    min-height: 450px;
 }
 
 /* Slide one by one with pause */

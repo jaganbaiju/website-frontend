@@ -1,9 +1,25 @@
-import React from "react";
+import {React, useState, useEffect } from "react";
 import "./coreServices.css"
 import CoreServiceCard from "./coreServiceCard";
 
 
 function Coreservices() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [coreCardData, setCoreCardData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/core_services/")
+            .then((res) => res.json())
+            .then((data) => {
+                setCoreCardData(data.data);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
+    console.log(coreCardData);
+    
+
     return (
         <div className="core-service-div">
             <div className="core-service-sub-div">
@@ -12,15 +28,21 @@ function Coreservices() {
                 </h1>
                 <div className="container pt-4 pb-4">
                     <div className="row g-5">
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
-                        <CoreServiceCard />
+
+                        {
+                            coreCardData?.map((item) => {
+                                return (
+                                    <CoreServiceCard 
+                                        key={item.id}
+                                        id={item.id}
+                                        title={item.title}
+                                        icon={`${BASE_URL}${item.icon}`}
+                                        desc={item.desc}
+                                    />
+                                );
+                            })
+                        }
+
                     </div>
                 </div>
             </div>

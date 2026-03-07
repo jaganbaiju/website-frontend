@@ -9,6 +9,10 @@
     padding: 0 10px;
 }
 
+.client-work-card-div{
+    min-width: 260px;
+}
+
 .client-name {
     font-size: 12px;
 }

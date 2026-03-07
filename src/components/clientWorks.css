@@ -17,15 +17,16 @@
 
 .client-work-track {
     display: flex;
-    gap: 5px;
-    animation: scrollLeft 10s linear infinite;
+    gap: 20px;
+    width: max-content;
+    animation: scrollLefts 25s linear infinite;
 }
 
-@keyframes scrollLeft {
-  0% {
+@keyframes scrollLefts {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }

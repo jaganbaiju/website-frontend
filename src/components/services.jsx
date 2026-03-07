@@ -53,12 +53,7 @@ function Services() {
                                 );
                             })
                         }
-
-
-                        {/* <ServiceCard />
-                        <ServiceCard />
-                        <ServiceCard />
-                        <ServiceCard /> */}
+                        
                     </div>
                 </div>
             </div>

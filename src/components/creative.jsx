@@ -1,18 +1,59 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import "./creative.css";
 import NumberIncrementList from "./numberIncrement";
 import Poster from "./poster";
 
 
 function Creative() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [numData, setNumData] = useState([
+        {
+            "title": "PROJECTS",
+            "num": 5000
+        },
+        {
+            "title": "CLIENTS",
+            "num": 500
+        },
+        {
+            "title": "COUNTRIES",
+            "num": 2
+        },
+        {
+            "title": "CREATIVES",
+            "num": 10000
+        }
+    ]);
+
+    const [posterImages, setPosterImages] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/posters/")
+            .then((res) => res.json())
+            .then((data) => {
+                setPosterImages(data.data);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
     return(
         <div className="creative-div">
             <div className="creative">
                 <div className="row">
-                    <NumberIncrementList />
-                    <NumberIncrementList />
-                    <NumberIncrementList />
-                    <NumberIncrementList />
+
+                    {
+                        numData.map((item) => {
+                            return (
+                                <NumberIncrementList 
+                                    key={item.title}
+                                    title={item.title}
+                                    num={item.num}
+                                />
+                            );
+                        })
+                    }
+
                 </div>
             </div>
             <div className="creative-sub">
@@ -21,16 +62,29 @@ function Creative() {
                 </h1>
                 <div className="poster-slider">
                     <div className="poster-track">
-                        <Poster />
-                        <Poster />
-                        <Poster />
-                        <Poster />
+
+                        {
+                            posterImages.map((item) => {
+                                return (
+                                    <Poster 
+                                        key={item.id}
+                                        img={`${BASE_URL}${item.poster}`}
+                                    />
+                                );
+                            })
+                        }
+
+                        {
+                            posterImages.map((item) => {
+                                return (
+                                    <Poster 
+                                        key={item.id}
+                                        img={`${BASE_URL}${item.poster}`}
+                                    />
+                                );
+                            })
+                        }
                         
-                        <Poster />
-                        <Poster />
-                        <Poster />
-                        <Poster />
-                        {/* <Poster /> */}
                     </div>
                 </div>
             </div>

@@ -4,13 +4,13 @@ import CountUp from "react-countup";
 
 
 
-function NumberIncrementList() {
+function NumberIncrementList(props) {
     return (
         <div className="num-increment-div col-6 col-md-3 text-center">
             <h1 className="total-number">
-                <CountUp start={0} end={5000} duration={2} separator="" enableScrollSpy={true} />+
+                <CountUp start={0} end={props.num} duration={2} separator="" enableScrollSpy={true} />+
             </h1>
-            <h4 className="service-type">Projects</h4>
+            <h4 className="service-type">{props.title}</h4>
         </div>
     );
 }

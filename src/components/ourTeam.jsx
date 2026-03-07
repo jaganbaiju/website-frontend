@@ -1,10 +1,23 @@
-import React from "react";
+import {React, useState, useEffect} from "react";
 import "./ourTeam.css"
 import OurHeadCarousel from "./ourHeadCarousel";
 import TeamCards from "./team";
 
 
 function OurTeam() {
+
+    const BASE_URL = "http://127.0.0.1:8000";
+    const [teamData, setTeamData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://127.0.0.1:8000/api/team/")
+            .then((res) => res.json())
+            .then((data) => {
+                setTeamData(data.data);
+            })
+            .catch((err) => console.log(err));
+    }, []);
+
     return (
         <div className="our-team">
             <div className="our-team-sub">
@@ -17,16 +30,35 @@ function OurTeam() {
                     </h3>
                     <div className="team-slider">
                         <div className="team-track">
-                            <TeamCards />
-                            <TeamCards />
-                            <TeamCards />
-                            <TeamCards />
 
-                        
-                            <TeamCards />
-                            <TeamCards />
-                            <TeamCards />
-                            <TeamCards />
+                            {
+                                teamData.map((item) => {
+                                    return (
+                                        <TeamCards 
+                                            key={item.id}
+                                            image={`${BASE_URL}${item.image}`}
+                                            name={item.name}
+                                            positon={item.positon}
+                                        />
+                                    );
+                                })
+                            }
+
+                            {/* dupllicate for smooth flow */}
+                            {
+                                teamData.map((item) => {
+                                    return (
+                                        <TeamCards 
+                                            key={item.id}
+                                            image={`${BASE_URL}${item.image}`}
+                                            name={item.name}
+                                            positon={item.positon}
+                                        />
+                                    );
+                                })
+                            }
+
+                            
                         </div>
                     </div>
                 </div>
