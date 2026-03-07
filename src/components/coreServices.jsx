@@ -5,7 +5,7 @@ import CoreServiceCard from "./coreServiceCard";
 
 function Coreservices() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com";
     const [coreCardData, setCoreCardData] = useState([]);
 
     useEffect(() => {
