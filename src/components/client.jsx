@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 
 function Client() {
 
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/reviews/")
+        fetch("https://website-backend-api-sz6i.onrender.com//api/reviews/")
             .then((res) => res.json())
             .then((data) => {
                 setReviews(data.data);

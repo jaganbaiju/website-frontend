@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 
 function ClientWork () {
 
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
         const [workData, setWorkData] = useState([]);
     
         useEffect(() => {
-            fetch("http://127.0.0.1:8000/api/works/")
+            fetch("https://website-backend-api-sz6i.onrender.com/api/works/")
                 .then((res) => res.json())
                 .then((data) => {
                     setWorkData(data.data);

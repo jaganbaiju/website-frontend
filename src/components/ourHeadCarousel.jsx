@@ -6,11 +6,11 @@ import CarouselIMG from "../assets/images/coo.png"
 
 function OurHeadCarousel() {
 
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [carouselData, setCarouselData] = useState([]);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/messages/")
+        fetch("https://website-backend-api-sz6i.onrender.com/api/messages/")
             .then((res) => res.json())
             .then((data) => {
                 setCarouselData(data.data);

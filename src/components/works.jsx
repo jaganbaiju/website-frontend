@@ -8,13 +8,13 @@ import { motion } from "framer-motion";
 
 function Works() {
 
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [imgCardData, setImgCardData] = useState([])
     const [vdoCardData, setVdoCardData] = useState([])
 
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/portfolio/")
+        fetch("https://website-backend-api-sz6i.onrender.com/api/portfolio/")
             .then((res) => res.json())
             .then((data) => {
                 setImgCardData(data.data.img_portfolio);

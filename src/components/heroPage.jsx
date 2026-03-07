@@ -7,11 +7,11 @@ import axios from "axios";
 
 
 function HeroPage() {
-    const BASE_URL = "http://127.0.0.1:8000";
+    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [heroData, setHeroData] = useState(null);
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/hero_page/")
+        fetch("https://website-backend-api-sz6i.onrender.com/api/hero_page/")
             .then((response) => response.json())
             .then((data) => {
                 setHeroData(data.data);
