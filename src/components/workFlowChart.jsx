@@ -12,7 +12,7 @@ import DetailsGIF4 from "../assets/gif/truck.gif"
 
 function WorkFlowChart() {
 
-    const [stepData, setStepData] = useState([
+    const [stepData] = useState([
         {
             "title": "Collect Details",
             "gif": DetailsGIF1

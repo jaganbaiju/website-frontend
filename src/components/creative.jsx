@@ -8,7 +8,7 @@ import Poster from "./poster";
 function Creative() {
 
     // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
-    const [numData, setNumData] = useState([
+    const [numData ] = useState([
         {
             "title": "PROJECTS",
             "num": 5000
