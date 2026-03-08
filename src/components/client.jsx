@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from "react";
+import { React, useEffect, useState } from "react";
 import "./client.css"
 import Review from "./review";
 import { motion } from "framer-motion";
@@ -15,13 +15,11 @@ function Client() {
                 setReviews(data.data);
             })
             .catch((err) => console.log(err));
-            
+
     }, []);
 
-    console.log(reviews);
 
-
-    return(
+    return (
         <div className="client-div">
             <div className="client">
                 <motion.h5 className="client-head"
@@ -44,21 +42,18 @@ function Client() {
                 <div className="review-slider">
                     <div className="review-track">
                         {
-                            reviews.map((item) => {
+                            reviews?.map((item) => {
 
-                               const imgUrl = item?.img
-                                        ? decodeURIComponent(
-                                            item.img.replace(/^\/(?!\/)/, '')
-                                        )
-                                        : null; 
+                                const backendUrl = item?.img;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
                                 return (
-                                    <Review 
+                                    <Review
                                         key={item.id}
-                                        img={`${imgUrl}`}
+                                        img={`${filePath}`}
                                         title={item.title}
                                         msg={item.desc}
-                                    /> 
+                                    />
                                 )
                             })
                         }
@@ -68,23 +63,23 @@ function Client() {
                             reviews?.map((item) => {
 
                                 const imgUrl = item?.img
-                                        ? decodeURIComponent(
-                                            item.img.replace(/^\/(?!\/)/, '')
-                                        )
-                                        : null;
+                                    ? decodeURIComponent(
+                                        item.img.replace(/^\/(?!\/)/, '')
+                                    )
+                                    : null;
 
                                 return (
-                                    <Review 
+                                    <Review
                                         key={item.id}
                                         img={`${imgUrl}`}
                                         title={item.title}
                                         msg={item.desc}
-                                    /> 
+                                    />
                                 )
                             })
                         }
 
-                                               
+
 
                     </div>
                 </div>

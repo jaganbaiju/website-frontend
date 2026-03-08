@@ -43,12 +43,12 @@ function Creative() {
                 <div className="row">
 
                     {
-                        numData.map((item) => {
+                        numData?.map((item) => {
                             return (
                                 <NumberIncrementList 
-                                    key={item.title}
-                                    title={item.title}
-                                    num={item.num}
+                                    key={item?.title}
+                                    title={item?.title}
+                                    num={item?.num}
                                 />
                             );
                         })
@@ -64,18 +64,16 @@ function Creative() {
                     <div className="poster-track">
 
                         {
-                            posterImages.map((item) => {
+                            posterImages?.map((item) => {
 
-                                const imgUrl = item?.poster
-                                        ? decodeURIComponent(
-                                            item.poster.replace(/^\/(?!\/)/, '')
-                                        )
-                                        : null;
+                                const backendUrl = item?.poster;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
 
                                 return (
                                     <Poster 
                                         key={item.id}
-                                        img={`${imgUrl}`}
+                                        img={`${filePath}`}
                                     />
                                 );
                             })
@@ -84,16 +82,14 @@ function Creative() {
                         {
                             posterImages.map((item) => {
 
-                                const imgUrl = item?.poster
-                                        ? decodeURIComponent(
-                                            item.poster.replace(/^\/(?!\/)/, '')
-                                        )
-                                        : null;
+                                const backendUrl = item?.poster;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
                                         
                                 return (
                                     <Poster 
                                         key={item.id}
-                                        img={`${imgUrl}`}
+                                        img={`${filePath}`}
                                     />
                                 );
                             })

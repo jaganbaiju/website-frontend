@@ -15,7 +15,7 @@ function Works() {
 
     useEffect(() => {
         fetch("https://website-backend-api-sz6i.onrender.com/api/portfolio/")
-        // fetch("http://127.0.0.1:8000/api/portfolio/")
+            // fetch("http://127.0.0.1:8000/api/portfolio/")
             .then((res) => res.json())
             .then((data) => {
                 setImgCardData(data.data.img_portfolio);
@@ -41,51 +41,33 @@ function Works() {
 
     // console.log(imgCard1);
 
-    const imgUrl1 = imgCard1?.background_image
-        ? decodeURIComponent(
-            imgCard1.background_image.replace(/^\/(?!\/)/, '')
-        )
-        : null;
+    const backendUrl1 = imgCard1?.background_image;
+    const filePath1 = backendUrl1?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
-    const imgUrl2 = imgCard2?.background_image
-        ? decodeURIComponent(
-            imgCard2.background_image.replace(/^\/(?!\/)/, '')
-        )
-        : null;
+    const backendUrl2 = imgCard2?.background_image;
+    const filePath2 = backendUrl2?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
-    const imgUrl3 = imgCard3?.background_image
-        ? decodeURIComponent(
-            imgCard3.background_image.replace(/^\/(?!\/)/, '')
-        )
-        : null;
+    const backendUrl3 = imgCard3?.background_image;
+    const filePath3 = backendUrl3?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
-    const imgUrl4 = imgCard4?.background_image
-        ? decodeURIComponent(
-            imgCard4.background_image.replace(/^\/(?!\/)/, '')
-        )
-        : null;
+    const backendUrl4 = imgCard4?.background_image;
+    const filePath4 = backendUrl4?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
-    const vdoUrl1 = vdoCard1?.background_video
-        ? decodeURIComponent(
-            vdoCard1.background_video.replace(/^\/(?!\/)/, '')
-        )
-        : null;
+    ///////
+
+    const backendUrl5 = vdoCard1?.background_image;
+    const filePath5 = backendUrl5?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+ 
+    const backendUrl6 = vdoCard2?.background_image;
+    const filePath6 = backendUrl6?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
     
-    const vdoUrl2 = vdoCard2?.background_video
-        ? decodeURIComponent(
-            vdoCard2.background_video.replace(/^\/(?!\/)/, '')
-        )
-        : null;
-
-    // console.log(vdoCard1?.background_video);
-    // console.log(vdoUrl1);
-   
     return (
         <div className="works row g-3">
             <div className="column col-12 col-md-4">
                 <motion.div
                     className="work-card card-1 mb-3"
-                    style={{ backgroundImage: `url(${imgUrl1})` }}
+                    style={{ backgroundImage: `url(${filePath1})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.3 }}
@@ -107,7 +89,7 @@ function Works() {
                 </motion.div>
                 <motion.div
                     className="work-card card-2"
-                    style={{ backgroundImage: `url(${imgUrl2})` }}
+                    style={{ backgroundImage: `url(${filePath2})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.3 }}
@@ -131,7 +113,7 @@ function Works() {
             <div className="column col-12 col-md-4 ">
                 <motion.div
                     className="work-card card-3 mb-3"
-                    style={{ backgroundImage: `url(${imgUrl3})` }}
+                    style={{ backgroundImage: `url(${filePath3})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.5 }}
@@ -153,7 +135,7 @@ function Works() {
                 </motion.div>
                 <motion.div
                     className="work-card card-4"
-                    style={{ backgroundImage: `url(${imgUrl4})` }}
+                    style={{ backgroundImage: `url(${filePath4})` }}
                     initial={{ y: 100, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 2, delay: 0.5 }}
@@ -193,7 +175,7 @@ function Works() {
                             preload="auto"
                         >
                             <source
-                                src={`${vdoUrl1}`}
+                                src={`${filePath5}`}
                                 type="video/mp4"
                             />
                         </video>
@@ -231,7 +213,7 @@ function Works() {
                             preload="auto"
                         >
                             <source
-                                src={`${vdoUrl2}`}
+                                src={`${filePath6}`}
                                 type="video/mp4"
                             />
                         </video>

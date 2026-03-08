@@ -42,19 +42,15 @@ function Services() {
 
                         {
                             serivcesData?.map((cardData) => {
-                                // const imgUrl = cardData.background_image;
-                                // console.log(imgUrl);
 
-                                const imgUrl = cardData?.background_image
-                                    ? decodeURIComponent(
-                                        cardData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
-                                    )
-                                    : null;
+                                const backendUrl = cardData?.background_image;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
                                 
                                 return (
                                     <ServiceCard
                                         id={cardData.id}
-                                        bgImg={`${imgUrl}`}
+                                        bgImg={`${filePath}`}
                                         title={cardData.heading}
                                         desc={cardData.desc}
                                         link={cardData.link}

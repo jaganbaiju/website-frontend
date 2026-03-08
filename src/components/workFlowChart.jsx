@@ -39,7 +39,7 @@ function WorkFlowChart() {
                     <div className="row">
 
                         {
-                            stepData.map((item) => {
+                            stepData?.map((item) => {
                                 return (
                                     <Step key={item.title}
                                         title={item.title}

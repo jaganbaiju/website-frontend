@@ -21,13 +21,13 @@ function HeroPage() {
     // console.log(heroData);
 
     const backendUrl = heroData?.background_image;
-    const fileName = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+    const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
     return (
         <div className="hero-page"
             style={{
                 backgroundImage:
-                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${fileName})`
+                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${filePath})`
             }}
         >
             <NavaBar />

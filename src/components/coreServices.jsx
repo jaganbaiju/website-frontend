@@ -18,9 +18,6 @@ function Coreservices() {
             .catch((err) => console.log(err));
     }, []);
 
-    console.log(coreCardData);
-
-
     return (
         <div className="core-service-div">
             <div className="core-service-sub-div">
@@ -33,18 +30,16 @@ function Coreservices() {
                         {
                             coreCardData?.map((item) => {
 
-                                const imgUrl = item?.icon
-                                    ? decodeURIComponent(
-                                        item.icon.replace(/^\/(?!\/)/, '')
-                                    )
-                                    : null;
+                                const backendUrl = item?.icon;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
 
                                 return (
                                     <CoreServiceCard
                                         key={item.id}
                                         id={item.id}
                                         title={item.title}
-                                        icon={`${imgUrl}`}
+                                        icon={`${filePath}`}
                                         desc={item.desc}
                                     />
                                 );

@@ -39,18 +39,16 @@ function WeProvided() {
                     {
                         listItemdata?.map((item, index) => {
 
-                            const imgUrl = item?.image
-                                ? decodeURIComponent(
-                                    item.image.replace(/^\/(?!\/)/, '')
-                                )
-                                : null;
+                            const backendUrl = item?.image;
+                            const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
 
                             return (
                                 <OurServicesList
                                     key={item.id}
                                     index={index}
                                     title={item.title}
-                                    img={`${imgUrl}`}
+                                    img={`${filePath}`}
                                     desc={item.desc}
                                 />
                             );

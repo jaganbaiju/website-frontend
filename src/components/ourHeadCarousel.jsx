@@ -25,21 +25,19 @@ function OurHeadCarousel() {
             {
                 carouselData?.map((item) => {
 
-                    const imgUrl = item?.image
-                        ? decodeURIComponent(
-                            item.image.replace(/^\/(?!\/)/, '')
-                        )
-                        : null;
+                    const backendUrl = item?.image;
+                    const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
+
 
                     return (
-                        <Carousel.Item>
+                        <Carousel.Item key={item.id}>
                             <h2 className='team-carousel-head'>
                                 {/* Our COO's Message */}
                                 {item?.heading}
                             </h2>
                             <div className="row head-carousel-body">
                                 <div className="head-image-div col-12 col-md-4">
-                                    <img className="d-block w-100 head-image" src={`${imgUrl}`} alt="First slide" />
+                                    <img className="d-block w-100 head-image" src={`${filePath}`} alt="First slide" />
                                 </div>
                                 <div className="head-message-div col-12 col-md-8">
                                     <p className='head-message'>
