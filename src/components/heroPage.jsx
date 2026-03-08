@@ -2,11 +2,11 @@ import './heroPage.css';
 import { motion } from "framer-motion";
 import NavaBar from "./navBar";
 import { useEffect, useState } from "react";
-import axios from "axios";
+// import axios from "axios";
 
 
 function HeroPage() {
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com";
     const [heroData, setHeroData] = useState(null);
 
     useEffect(() => {

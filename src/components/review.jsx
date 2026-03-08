@@ -1,7 +1,6 @@
-import React from "react";
+// import React from "react";
 import "./review.css"
-import ClientIMG from "../assets/images/team.png"
-import { FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar, FaRegStar } from "react-icons/fa";
 
 
 function Review(props) {

@@ -1,11 +1,12 @@
-import { React, useState, useEffect } from "react";
+// import React from "react";
+import { useState, useEffect } from "react";
 import "./weProvided.css"
 import OurServicesList from "./ourServicesList";
 
 
 function WeProvided() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [listItemdata, setListItemData] = useState([]);
 
     useEffect(() => {

@@ -1,5 +1,4 @@
 import "./servicesCard.css"
-import DMImage from "../assets/images/DM.png";
 import { FaArrowRight } from "react-icons/fa";
 
 
@@ -17,7 +16,7 @@ function ServiceCard(props) {
                         {/* REACH YOUR TARGET AUDIENCE */}
                         {props.desc}
                     </p>
-                    <a href="#" className="service-card-link">
+                    <a href="/" className="service-card-link">
                         {/* LEARN MORE  */}
                         {props.link} <FaArrowRight color="#FCD104" />
                     </a>

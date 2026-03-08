@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import "./ourServicesList.css";
-import PrintIMG from "../assets/images/printing.png"
 
 
 function OurServicesList(props) {

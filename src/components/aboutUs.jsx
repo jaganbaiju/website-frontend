@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./about.css"
 import { motion } from "framer-motion";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -31,7 +31,7 @@ function AboutUs() {
                         <p className="abt-para">
                             Nunc lorem. turpis convallis. Praesent elit vitae Morbi risus id Lorem Vestibulum placerat ipsum facilisis facilisis massa nibh dignissim, faucibus laoreet In at non eget Donec elit maximus consectetur nulla, sodales. vehicula, amet, dui.
                         </p>
-                        <a href="#" className="abt-read-more">
+                        <a href="/" className="abt-read-more">
                             Read More
                         </a>
                     </motion.div>

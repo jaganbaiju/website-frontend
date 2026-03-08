@@ -1,4 +1,5 @@
-import { React, useState, useEffect } from "react";
+// import React from "react";
+import { useState, useEffect } from "react";
 import "./ourTeam.css"
 import OurHeadCarousel from "./ourHeadCarousel";
 import TeamCards from "./team";
@@ -6,7 +7,7 @@ import TeamCards from "./team";
 
 function OurTeam() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [teamData, setTeamData] = useState([]);
 
     useEffect(() => {

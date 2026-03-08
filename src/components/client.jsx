@@ -1,11 +1,12 @@
-import { React, useEffect, useState } from "react";
+// import React from "react";
+import { useEffect, useState } from "react";
 import "./client.css"
 import Review from "./review";
 import { motion } from "framer-motion";
 
 function Client() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {

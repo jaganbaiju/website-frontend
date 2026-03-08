@@ -1,14 +1,13 @@
-import { React, useEffect, useState } from "react";
+// import React from "react";
+import { useEffect, useState } from "react";
 import "./works.css"
-import DMImage from "../assets/images/DM.png";
-import DRNKimage from "../assets/images/drink.png"
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 
 function Works() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [imgCardData, setImgCardData] = useState([])
     const [vdoCardData, setVdoCardData] = useState([])
 
@@ -84,7 +83,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {imgCard1?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {imgCard1?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>
@@ -106,7 +105,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {imgCard2?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {imgCard2?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>
@@ -130,7 +129,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {imgCard3?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {imgCard3?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>
@@ -152,7 +151,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {imgCard4?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {imgCard4?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>
@@ -192,7 +191,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {vdoCard1?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {vdoCard1?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>
@@ -231,7 +230,7 @@ function Works() {
                             {/* REACH YOUR TARGET AUDIENCE */}
                             {vdoCard2?.desc}
                         </p>
-                        <a href="#" className="service-card-link">
+                        <a href="/" className="service-card-link">
                             {vdoCard2?.link} <FaArrowRight color="#FCD104" />
                         </a>
                     </div>

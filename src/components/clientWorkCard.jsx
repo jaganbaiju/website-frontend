@@ -1,5 +1,4 @@
 import "./clientWorkCard.css";
-import WorkIMG from "../assets/images/work-1.png"
 import { FaPlay } from "react-icons/fa";
 
 function ClientWorkCard(props) {

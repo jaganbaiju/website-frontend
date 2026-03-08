@@ -36,9 +36,9 @@ function Footer() {
                                         Company Info
                                     </h5>
                                     <ul className="footer-section">
-                                        <li><a href="#">About Us</a></li>
-                                        <li><a href="#">We Are Hiring</a></li>
-                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="/">About Us</a></li>
+                                        <li><a href="/">We Are Hiring</a></li>
+                                        <li><a href="/">Blog</a></li>
                                     </ul>
                                 </div>
                                 <div className="legal">
@@ -46,8 +46,8 @@ function Footer() {
                                         Legal
                                     </h5>
                                     <ul className="footer-section">
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="/">Terms & Conditions</a></li>
+                                        <li><a href="/">Privacy Policy</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -57,10 +57,10 @@ function Footer() {
                                         Features
                                     </h5>
                                     <ul className="footer-section">
-                                        <li><a href="#">Business Marketing</a></li>
-                                        <li><a href="#"></a>User Analytic</li>
-                                        <li><a href="#">Live Chat</a></li>
-                                        <li><a href="#">Unlimited Support</a></li>
+                                        <li><a href="/">Business Marketing</a></li>
+                                        <li><a href="/"></a>User Analytic</li>
+                                        <li><a href="/">Live Chat</a></li>
+                                        <li><a href="/">Unlimited Support</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -71,19 +71,19 @@ function Footer() {
                                     </h5>
                                     <ul className="footer-section">
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <FaPhoneAlt size={30}  className="icon"/>
                                                 +971 00 000 000 || +971 00 000 0000
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <FaEnvelope size={30} className="icon"/>
                                                 info@tested.ae || test@printzed.ae
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <FaMapMarkerAlt size={30} className="icon" />
                                                 Shop No: 13, xxxxxxxxxxxxxxxx xxxxxxxxxxxxxxxxxxxxxxxDubai - U.A.E.
                                             </a>

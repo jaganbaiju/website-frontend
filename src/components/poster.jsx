@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import "./poster.css";
-import PosterImg from "../assets/images/poster-1.png";
 
 
 function Poster(props) {

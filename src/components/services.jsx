@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './services.css'
 import { motion } from "framer-motion";
 import ServiceCard from "./servicesCard";
@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Services() {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
     const [serivcesData, setServicesData] = useState([])
 
     useEffect(() => {

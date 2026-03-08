@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import "./team.css"
-import Team from "../assets/images/team.png"
 
 
 function TeamCards(props) {

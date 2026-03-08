@@ -1,6 +1,5 @@
-import React from "react";
+// import React from "react";
 import "./coreServiceCard.css"
-import Digalprint from "../assets/images/digital-printing.png"
 
 
 

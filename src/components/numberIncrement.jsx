@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./numberIncrement.css"
 import CountUp from "react-countup";
 

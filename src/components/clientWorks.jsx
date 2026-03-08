@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 function ClientWork () {
 
-    const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
+    // const BASE_URL = "https://website-backend-api-sz6i.onrender.com/";
         const [workData, setWorkData] = useState([]);
     
         useEffect(() => {
