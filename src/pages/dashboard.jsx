@@ -6,9 +6,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function Dashboard() {
 
-  const [title, setTitle] = useState("Hero Page");
-  const [data, setData] = useState([]);
-  const [heroData, setHeroData] = useState([]);
+  // const [title, setTitle] = useState("Hero Page");
+  // const [data, setData] = useState([]);
+  // const [heroData, setHeroData] = useState([]);
 
   return (
     <div className='dashboard'>

@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from "react-router-dom";
 import './home.css'
 import { Helmet } from "react-helmet";
 import HeroPage from '../components/heroPage';
