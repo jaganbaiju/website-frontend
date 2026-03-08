@@ -55,10 +55,12 @@ function Works() {
 
     ///////
 
-    const backendUrl5 = vdoCard1?.background_image;
+    const backendUrl5 = vdoCard1?.background_video;
+    console.log(backendUrl5);
     const filePath5 = backendUrl5?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
- 
-    const backendUrl6 = vdoCard2?.background_image;
+    console.log(filePath5)
+
+    const backendUrl6 = vdoCard2?.background_video;
     const filePath6 = backendUrl6?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
     
