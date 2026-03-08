@@ -37,7 +37,7 @@ function HeroPage() {
         <div className="hero-page"
             style={{
                 backgroundImage:
-                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${url})`
+                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(https:/ik.imagekit.io/siczeomnnq/bg_Az6z1-wmu.png)`
             }}
         >
             <NavaBar />
