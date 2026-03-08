@@ -43,17 +43,14 @@ function ClientWork () {
                         {
                             workData?.map((item) => {
 
-                                const imgUrl = item?.image
-                                        ? decodeURIComponent(
-                                            item.image.replace(/^\/(?!\/)/, '')
-                                        )
-                                        : null;
+                                const backendUrl = item?.image;
+                                const filePath = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
                                 return (
                                     <ClientWorkCard 
                                         key={item.id}
                                         name={item.name}
-                                        img={`${imgUrl}`}
+                                        img={`${filePath}`}
                                         comp={item.company}
                                     />
                                 );
