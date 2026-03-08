@@ -20,24 +20,14 @@ function HeroPage() {
 
     // console.log(heroData);
 
-    // if (!heroData) {
-    //     return <p>Loading..</p>;
-    // }
-
-    const from_api = heroData?.background_image
-        ? decodeURIComponent(
-            heroData.background_image.replace(/^\/(?!\/)/, '') // remove only a single leading slash if it's not part of https://
-        )
-        : null;
-    
-    const url = ""
-    // console.log(from_api)
+    const backendUrl = heroData?.background_image;
+    const fileName = backendUrl?.replace("/https%3A/ik.imagekit.io/siczeomnnq/", "https://ik.imagekit.io/siczeomnnq/");
 
     return (
         <div className="hero-page"
             style={{
                 backgroundImage:
-                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(https://ik.imagekit.io/siczeomnnq/bg_Az6z1-wmu.png)`
+                    `linear-gradient(to bottom,transparent 60%,var(--background-color) 100%), url(${fileName})`
             }}
         >
             <NavaBar />
